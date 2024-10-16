@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess The Word</title>
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.min.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./Fonts/remixicon.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <h1></h1>
+  <div class="guess-game">
+
+    <div class="game-area">
+      <div class="inputs"></div>
+      <div class="ctrls">
+        <button class="check-word">Check Word</button>
+        <button class="hint" title="Hints"><span></span><span class="ri-lightbulb-flash-fill"></span></button>
+      </div>
+      <div class="message"></div>
+    </div>
+
+
+    <div class="color-area">
+      <h2>Color Keys</h2>
+
+      <div class="key">
+        <div class="color in-place"></div>
+        <div class="color-text">Letter is correct and in-place</div>
+      </div>
+
+      <div class="key">
+        <div class="color not-in-place"></div>
+        <div class="color-text">Letter is correct and not in-place</div>
+      </div>
+
+      <div class="key">
+        <div class="color wrong"></div>
+        <div class="color-text">Wrong Letter</div>
+      </div>
+    </div>
+
+  </div>
+  <footer></footer>
+  <script src="logic.js"></script>
+</body>
+
+</html>

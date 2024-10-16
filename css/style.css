@@ -1,0 +1,220 @@
+:root {
+  --main-color: #ff9800;
+  --main-time: 0.3s;
+  --section-background: #dddddd
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  color: #FFF;
+  background: var(--main-color);
+}
+
+* {
+  font-family: Open_Sans;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+}
+
+@font-face {
+  font-family: Open_Sans;
+  src: url(../Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+h1:first-of-type {
+  text-align: center;
+  padding: 20px;
+  margin: 0 0 50px;
+}
+
+.guess-game {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 1000px;
+  min-height: 675px;
+  background: #ddd;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 100px auto;
+
+  .game-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .disabled-inputs {
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    .inputs {
+      input[type="text"] {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+        caret-color: var(--main-color);
+        background: #fff;
+        border: none;
+        border-block-end: 2px solid black;
+
+        &.in-place {
+          background: #ff9800;
+          color: white;
+          border-block-end: #ff9800
+        }
+
+        &.not-in-place {
+          background: #18ba89;
+          color: white;
+          border-block-end: #18ba89
+        }
+
+        &.wrong {
+          background: #222;
+          color: white;
+          border-block-end: #222;
+        }
+
+        &:focus {
+          outline: 2px solid #eee;
+        }
+
+        &:not(:nth-last-of-type(1)) {
+          margin-right: 10px;
+        }
+
+      }
+    }
+
+    .inputs>div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+
+
+    .inputs>div span {
+      font-weight: bold;
+      font-size: 30px;
+      margin-right: 10px;
+    }
+
+    .ctrls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 433px;
+      margin: 30px auto;
+      gap: 10px;
+
+      .check-word {
+        background-color: var(--main-color);
+        cursor: pointer;
+        flex: 1;
+      }
+
+      button {
+        border: none;
+        font-size: 25px;
+        padding: 15px 20px;
+        border-radius: 6px;
+        color: white;
+        font-weight: bold;
+
+        &:disabled {
+          background: black;
+          opacity: .4;
+          cursor: no-drop;
+        }
+      }
+
+      .hint {
+        display: flex;
+        justify-content: space-between;
+        width: 90px;
+        background-color: #009688;
+        width: fit-content;
+      }
+
+    }
+  }
+
+  .color-area {
+    .key {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      background-color: #fff;
+      margin-bottom: 15px;
+
+      .color {
+        width: 25px;
+        height: 25px;
+        border-radius: 30%;
+        margin-right: 10px;
+
+        &.in-place {
+          background: #ff9800;
+        }
+
+        &.not-in-place {
+          background: #18ba89;
+        }
+
+        &.wrong {
+          background: #222;
+        }
+      }
+    }
+
+    .color-text {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
+
+.message {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+
+  span {
+    font-weight: bold;
+    display: block;
+    font-size: 50px;
+    color: var(--main-color);
+    text-transform: capitalize;
+    margin-top: 10px;
+  }
+
+  p {
+    margin-top: 15px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  color: white;
+  width: 100%;
+}
+
+
